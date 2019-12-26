@@ -1,0 +1,27 @@
+apple,dolce,item,95,25,0.5,0.3
+banana,dolce,item,105,27,1.3,0.4
+dried fruit,dolce,gr,3.59,0.83,0.01,0.027
+muesli,dolce,gr,2.89,0.66,0.08,0.04
+walnut,dolce,item,26,0.56,0.6,2.6
+Greek yogurt,dolce,gr,0.8,0.12,0.08,0
+blueberry jam,dolce,gr,2.6,0.99,0.01,0
+milk,dolce,ml,0.44,0.05,0.03,0.01
+crackers,dolce,item,128,19,3,4
+blueberries,dolce,gr,0.57,0.14,0.007,0.003
+slice of bread,dolce,item,94,17.7,4,0.8
+spaghetti,primo,gr,1.58,0.31,0.06,0.009
+basmati,primo,gr,1.3,0.28,0.04,0
+olive oil,primo,spoon,119,0,0,13.5
+smoked salmon,secondo,gr,0.9,0,0.12,0.05
+fish burger,secondo,item,34,0,1.2,0.6
+sandwhich,secondo,item,340,26,16,19
+topping cheese,secondo,item,17,0,1,1
+cooked salmon,secondo,gr,2.08,0,0.2,0.13
+chicken,secondo,gr,1.57,0.002,0.239,0.067
+speck,secondo,gr,3.03,0.0056,0.37,0.62
+egg,secondo,item,78,0.6,6,5
+carrots,contorno,item,52,12,1,0
+beans,contorno,item,347,63,21,1.2
+broccoli,contorno,item,50,10,4.2,0.5
+cucumber,contorno,item,16,3.6,0.7,0.1
+pepper,contorno,item,24,6,1,0.2

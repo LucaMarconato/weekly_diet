@@ -1,0 +1,133 @@
+{
+  "days": [
+    {
+      "day": "monday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": [
+            {
+              "name": "apple",
+              "quantity": 1
+            },
+            {
+              "name": "milk",
+              "quantity": 300
+            },
+            {
+              "name": "muesli",
+              "quantity": 50
+            },
+            {
+              "name": "banana",
+              "quantity": 1
+            },
+            {
+              "name": "walnut",
+              "quantity": 5
+            }
+          ]
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": [
+            {
+              "name": "apple",
+              "quantity": 1
+            },
+            {
+              "name": "dried fruit",
+              "quantity": 50
+            },
+            {
+              "name": "crackers",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+            {
+              "name": "average lunch",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+            {
+              "name": "apple",
+              "quantity": 1
+            },
+            {
+              "name": "dried fruit",
+              "quantity": 50
+            },
+            {
+              "name": "crackers",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "meal_type": "dinner",
+          "foods": [
+            {
+              "name": "spaghetti",
+              "quantity": 200
+            },
+            {
+              "name": "banana",
+              "quantity": 1
+            },
+            {
+              "name": "pesto",
+              "quantity": 63
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": "tuesday",
+      "meals": [
+      ]
+    },
+    {
+      "day": "wednesday",
+      "meals": [
+      ]
+    },
+    {
+      "day": "thursday",
+      "meals": [
+      ]
+    },
+    {
+      "day": "friday",
+      "meals": [
+      ]
+    },
+    {
+      "day": "saturday",
+      "meals": [
+      ]
+    },
+    {
+      "day": "sunday",
+      "meals": [
+        {
+        "meal_type": "breakfast",
+        "foods": [
+          {
+          "name": "basmati",
+          "quantity": 1500
+          }
+        ]
+        }
+      ]
+    }
+  ]
+}
