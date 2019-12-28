@@ -1,4 +1,5 @@
 # App to organize my weekly diet
+
 ##Disclaimers
 * **Since I am busy with many other projects and I didn't want to spend more than one day coding this app (which I wrote because I will use it), I have not curated the quality of the code** and have hardly placed any comment. In particular, the file `gui.py` is a good example of bad code 😛 
 * There are tons of apps like this, I could have modified existing code to adapt it to my needs, but it is more fun to write things from scratch 🥳
