@@ -16,7 +16,7 @@ The app represents a week made of 6 meals per day. You can drag and drop particu
 * Recipes hardcoded as strings in the `initialized_all_derived_foods::recipes` in `foods.py`, when you add a recipe into a meal widget, the recipe will be expanded into the list of its ingredients, so that you can adjust the quantities (e.g. more spaghetti in that meal)
 * The diet is stored in `diet.json`, the file is automatically handled by the app. An empty diet is found in `empty_diet.json`
 * `primi`, `secondi`, `contorni` and `dolci` are Italian words; their translations could roughly be "main dish rich in carbs", "main dish rich in proteins", "side dish (usually veggies)" and "sweets"
-* everything saves automatically, except one case covered in the bugs paragraphs below in which you need to press
+* everything saves automatically, except one case, covered in the bugs paragraphs below
 * from `report.py` you can set your target calories, carbohydrates, proteins and generate the shopping list
 
 ## Limitations and bugs
