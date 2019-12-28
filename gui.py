@@ -1,14 +1,15 @@
-from PyQt5 import QtWidgets, QtCore, QtGui
-from PyQt5.QtGui import QFocusEvent
-from PyQt5.QtWidgets import QApplication
-import PyQt5.uic
 import os
-from mpl_plot_widget import MyMplCanvas
-from typing import Dict
 import re
+from threading import Lock
+from typing import Dict
+
+import PyQt5.uic
+from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt5.QtWidgets import QApplication
 
 from diet import Diet, MealType, Day, Meal
-from foods import Food, FoodType, FoodUnit, derived_foods, get_all_foods_from_db, get_food_from_db, DerivedFood
+from foods import Food, FoodType, FoodUnit, derived_foods, get_all_foods_from_db, get_food_from_db
+from mpl_plot_widget import MyMplCanvas
 
 
 class DraggableListWidget(QtWidgets.QListWidget):
@@ -31,12 +32,11 @@ class DraggableListWidget(QtWidgets.QListWidget):
 
     @PyQt5.QtCore.pyqtSlot()
     def on_refresh_pressed(self):
-        # print('refresh pressed')
         self.diet_changed.emit()
 
+    # moved two rows within the same meal widget (e.g. from monday lunch to monday lunch)
     @PyQt5.QtCore.pyqtSlot()
     def on_rows_moved(self):
-        # print('internal move')
         self.diet_changed.emit()
 
     @PyQt5.QtCore.pyqtSlot()
@@ -54,13 +54,13 @@ class DraggableListWidget(QtWidgets.QListWidget):
             for widget in gui.menu_categories_widgets.values():
                 if widget.hasFocus():
                     the_focus_is_in_one_of_the_menu_widgets = True
+            # copied of one row from a menu widget to a meal widget (e.g. from desserts to monday lunch)
             if the_focus_is_in_one_of_the_menu_widgets:
-                # print('external menu move')
                 self.diet_changed.emit()
 
     @PyQt5.QtCore.pyqtSlot()
     def on_rows_removed(self):
-        # print('external non-menu move')
+        # moved one row from a meal widgt to a different meal widget (e.g. from monday breakfast to tuesday lunch)
         self.diet_changed.emit()
 
     def focusOutEvent(self, QFocusEvent):
@@ -113,6 +113,7 @@ class Gui(QtWidgets.QWidget):
         self.vbox_layout.insertWidget(1, self.canvas)
         self.hbox_layout = self.vbox_layout.itemAt(0)
         self.day_guis = list()
+        self.update_diet_lock = Lock()
 
         self.diet = Diet('diet.json')
 
@@ -127,7 +128,6 @@ class Gui(QtWidgets.QWidget):
 
         self.menu_widget = self.layout().itemAt(1).widget()
         self.menu_categories_widgets: Dict[FoodType, DraggableListWidget] = dict()
-        # self.backspace_shortcuts: Dict[QtWidgets.QShortcut] = dict()
         for i, food_type in zip(range(1, 14, 3), FoodType):
             widget_to_remove = self.menu_widget.layout().itemAt(i).widget()
             self.menu_widget.layout().removeWidget(widget_to_remove)
@@ -142,13 +142,14 @@ class Gui(QtWidgets.QWidget):
         for food in all_edible_foods:
             item = QtWidgets.QListWidgetItem(f'1 x {food.name}')
             self.menu_categories_widgets[food.food_type].addItem(item)
-        # DraggableListWidget.save_diet_on_changes = True
 
         for day_gui in self.day_guis:
             for widget in day_gui.meal_widgets.values():
                 widget.diet_changed.connect(self.on_diet_changed)
 
+    # the widget has been modified by the user, so we want to recreate the diet class to reflect the user changes
     def update_diet_from_widgets(self):
+        self.update_diet_lock.acquire()
         self.diet.days = list()
         for day_gui in self.day_guis:
             day = Day()
@@ -156,16 +157,14 @@ class Gui(QtWidgets.QWidget):
             day.day_name = day_gui.day_name.text()
             # print(day.day_name)
             for meal_type, meal_widget in day_gui.meal_widgets.items():
+                old_state = meal_widget.blockSignals(True)
                 meal = Meal()
                 day.meals.append(meal)
                 meal.meal_type = meal_type
                 # print(meal.meal_type.name)
                 model = meal_widget.model()
                 i = 0
-                # print('before')
-                # print(f'model.rowCount() = {model.rowCount()}')
                 while i < model.rowCount():
-                    # print(f'i = {i}, model.rowCount() = {model.rowCount()}')
                     item_data = model.itemData(model.index(i))
                     if len(item_data) == 1:
                         s = item_data[0]
@@ -176,10 +175,11 @@ class Gui(QtWidgets.QWidget):
                         quantity = int(groups[0])
                         food_name = groups[1]
                         food = get_food_from_db(food_name)
+                        # if the food is derived we add its ingredient to the diet, instead of the food itself,
+                        # this is to make explicit what a derived food is made of, and also to allow for the
+                        # customization of its ingredients
                         if food.name in [food.name for food in derived_foods]:
                             assert quantity == 1
-                            # meal_widget.takeItem(i)
-                            # i -= 1
                             for component in food.ingredients:
                                 meal.foods.append(component)
                                 unit = component.unit.name if component.unit.name != 'item' else 'x'
@@ -193,9 +193,8 @@ class Gui(QtWidgets.QWidget):
                             meal.foods.append(food)
                         # print(food.name)
                     i += 1
+
                 i = 0
-                # print('after')
-                # print(f'model.rowCount() = {model.rowCount()}')
                 while i < model.rowCount():
                     item_data = model.itemData(model.index(i))
                     if len(item_data) == 1:
@@ -211,15 +210,16 @@ class Gui(QtWidgets.QWidget):
                             meal_widget.takeItem(i)
                             break
                     i += 1
-                old_state = meal_widget.blockSignals(True)
+
+                # old_state = meal_widget.blockSignals(True)
                 for i in range(meal_widget.count()):
                     row = meal_widget.item(i)
                     row.setFlags(row.flags() | PyQt5.QtCore.Qt.ItemIsEditable)
                 meal_widget.blockSignals(old_state)
+        self.update_diet_lock.release()
 
     @PyQt5.QtCore.pyqtSlot()
     def on_diet_changed(self):
-        # print('diet changed')
         self.update_diet_from_widgets()
         self.diet.save()
         self.canvas.update_figure(self.diet)

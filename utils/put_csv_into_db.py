@@ -1,7 +1,8 @@
-import pandas as pd
 import sqlite3
 
-df = pd.read_csv('foods.csv', header=None)
+import pandas as pd
+
+df = pd.read_csv('foods.csv')
 
 connection = sqlite3.connect('../foods.db')
 cursor = connection.cursor()
@@ -13,7 +14,8 @@ for row in df.iterrows():
     carbs = row[1][4]
     prots = row[1][5]
     fats = row[1][6]
-    cursor.execute('INSERT OR REPLACE INTO foods VALUES (?, ?, ?, ?, ?, ?, ?)', (name, meal_type, food_type, calories, carbs, prots, fats))
+    cursor.execute('INSERT OR REPLACE INTO foods VALUES (?, ?, ?, ?, ?, ?, ?)',
+                   (name, meal_type, food_type, calories, carbs, prots, fats))
     print(f'inserted {name}')
 connection.commit()
 connection.close()

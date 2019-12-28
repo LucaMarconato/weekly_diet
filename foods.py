@@ -1,7 +1,7 @@
-import sqlite3
-from typing import List
-from enum import Enum
 import re
+import sqlite3
+from enum import Enum
+from typing import List
 
 FoodType = Enum('FoodType', 'dolce primo secondo contorno placeholder')
 FoodUnit = Enum('FoodUnit', 'item gr ml')
@@ -56,6 +56,7 @@ def get_food_from_db(name: str) -> Food:
                 proteins_per_unit=row[5],
                 fats_per_unit=row[6])
     return food
+
 
 def get_all_foods_from_db() -> List[Food]:
     connection = sqlite3.connect('foods.db')
@@ -117,9 +118,20 @@ derived_foods = list()
 
 def initialize_all_derived_foods():
     global derived_foods
+    # use the singual for items in the recipe, they must be valid food names
+    # a recipe can't use derived food as ingredients
     recipes = [
-        'riso with oil (primo): 180 gr basmati, 10 gr olive oil',
-        'spaghetti with oil (primo): 200 gr spaghetti, 10 gr olive oil'
+        'basmati with tomatoes (primo): 180 gr basmati, 2 tomato, 30 gr olive oil, 1 onion',
+        'spaghetti aglio olio peperoncino (primo): 200 gr spaghetti, 40 gr olive oil',
+        'spaghetti alla carbonara (primo): 200 gr spaghetti, 4 egg, 120 gr guanciale, 40 gr pecorino',
+        'spaghetti al pesto (primo): 200 gr spaghetti, 95 gr pesto',
+        'toast meal (secondo): 8 pan carre slice, 120 gr prosciutto cotto, 60 gr mayonnaise, 60 gr mustard',
+        'milk and muesli (dolce): 300 ml milk, 100 gr muesli',
+        'bread and nutella (dolce): 4 pan carre slice, 60 gr nutella',
+        'bread and jam (dolce): 4 pan carre slice, 60 gr jam',
+        'eggs and salmon (secondo): 2 egg, 100 gr smoked salmon',
+        'pasta al ragu (primo): 200 gr spaghetti, 200 gr ragu, 30 gr olive oil, 30 gr parmigiano',
+        'beef steak (secondo): 150 gr beef, 30 gr olive oil'
     ]
     for recipe in recipes:
         derived_food = derived_food_from_string(recipe)

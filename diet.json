@@ -5,27 +5,93 @@
       "meals": [
         {
           "meal_type": "breakfast",
-          "foods": []
+          "foods": [
+            {
+              "name": "milk",
+              "quantity": 300
+            },
+            {
+              "name": "muesli",
+              "quantity": 100
+            },
+            {
+              "name": "banana",
+              "quantity": 1
+            },
+            {
+              "name": "walnut",
+              "quantity": 3
+            }
+          ]
         },
         {
           "meal_type": "mid_morning",
-          "foods": []
+          "foods": [
+            {
+              "name": "apple",
+              "quantity": 1
+            }
+          ]
         },
         {
           "meal_type": "lunch",
-          "foods": []
+          "foods": [
+            {
+              "name": "spaghetti",
+              "quantity": 200
+            },
+            {
+              "name": "egg",
+              "quantity": 4
+            },
+            {
+              "name": "guanciale",
+              "quantity": 120
+            },
+            {
+              "name": "pecorino",
+              "quantity": 40
+            }
+          ]
         },
         {
           "meal_type": "mid_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "crackers",
+              "quantity": 1
+            }
+          ]
         },
         {
           "meal_type": "late_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "apple",
+              "quantity": 1
+            }
+          ]
         },
         {
           "meal_type": "dinner",
-          "foods": []
+          "foods": [
+            {
+              "name": "basmati",
+              "quantity": 180
+            },
+            {
+              "name": "carrots",
+              "quantity": 2
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30
+            },
+            {
+              "name": "onion",
+              "quantity": 1
+            }
+          ]
         }
       ]
     },
@@ -34,27 +100,97 @@
       "meals": [
         {
           "meal_type": "breakfast",
-          "foods": []
+          "foods": [
+            {
+              "name": "milk",
+              "quantity": 300
+            },
+            {
+              "name": "muesli",
+              "quantity": 100
+            },
+            {
+              "name": "banana",
+              "quantity": 1
+            },
+            {
+              "name": "walnut",
+              "quantity": 3
+            }
+          ]
         },
         {
           "meal_type": "mid_morning",
-          "foods": []
+          "foods": [
+            {
+              "name": "apple",
+              "quantity": 2
+            }
+          ]
         },
         {
           "meal_type": "lunch",
-          "foods": []
+          "foods": [
+            {
+              "name": "basmati",
+              "quantity": 200
+            },
+            {
+              "name": "tomato",
+              "quantity": 2
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30
+            },
+            {
+              "name": "onion",
+              "quantity": 1
+            }
+          ]
         },
         {
           "meal_type": "mid_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "crackers",
+              "quantity": 2
+            }
+          ]
         },
         {
           "meal_type": "late_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "walnut",
+              "quantity": 5
+            }
+          ]
         },
         {
           "meal_type": "dinner",
-          "foods": []
+          "foods": [
+            {
+              "name": "cucumber",
+              "quantity": 1
+            },
+            {
+              "name": "pan carre slice",
+              "quantity": 8
+            },
+            {
+              "name": "prosciutto cotto",
+              "quantity": 120
+            },
+            {
+              "name": "mayonnaise",
+              "quantity": 60
+            },
+            {
+              "name": "mustard",
+              "quantity": 60
+            }
+          ]
         }
       ]
     },
@@ -63,40 +199,37 @@
       "meals": [
         {
           "meal_type": "breakfast",
-          "foods": []
+          "foods": [
+            {
+              "name": "milk",
+              "quantity": 300
+            },
+            {
+              "name": "muesli",
+              "quantity": 50
+            },
+            {
+              "name": "pan carre slice",
+              "quantity": 4
+            },
+            {
+              "name": "nutella",
+              "quantity": 60
+            },
+            {
+              "name": "apple",
+              "quantity": 1
+            }
+          ]
         },
         {
           "meal_type": "mid_morning",
-          "foods": []
-        },
-        {
-          "meal_type": "lunch",
-          "foods": []
-        },
-        {
-          "meal_type": "mid_afternoon",
-          "foods": []
-        },
-        {
-          "meal_type": "late_afternoon",
-          "foods": []
-        },
-        {
-          "meal_type": "dinner",
-          "foods": []
-        }
-      ]
-    },
-    {
-      "day": "thursday",
-      "meals": [
-        {
-          "meal_type": "breakfast",
-          "foods": []
-        },
-        {
-          "meal_type": "mid_morning",
-          "foods": []
+          "foods": [
+            {
+              "name": "banana",
+              "quantity": 1
+            }
+          ]
         },
         {
           "meal_type": "lunch",
@@ -107,21 +240,151 @@
             },
             {
               "name": "olive oil",
-              "quantity": 10
+              "quantity": 40
+            },
+            {
+              "name": "beef",
+              "quantity": 150
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30
             }
           ]
         },
         {
           "meal_type": "mid_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "crackers",
+              "quantity": 2
+            }
+          ]
         },
         {
           "meal_type": "late_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "walnut",
+              "quantity": 3
+            }
+          ]
         },
         {
           "meal_type": "dinner",
-          "foods": []
+          "foods": [
+            {
+              "name": "basmati",
+              "quantity": 180
+            },
+            {
+              "name": "tomato",
+              "quantity": 2
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30
+            },
+            {
+              "name": "onion",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": "thursday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": [
+            {
+              "name": "milk",
+              "quantity": 300
+            },
+            {
+              "name": "muesli",
+              "quantity": 100
+            },
+            {
+              "name": "pan carre slice",
+              "quantity": 4
+            },
+            {
+              "name": "jam",
+              "quantity": 60
+            },
+            {
+              "name": "walnut",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": [
+            {
+              "name": "banana",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+            {
+              "name": "pan carre slice",
+              "quantity": 8
+            },
+            {
+              "name": "prosciutto cotto",
+              "quantity": 200
+            },
+            {
+              "name": "mayonnaise",
+              "quantity": 60
+            },
+            {
+              "name": "mustard",
+              "quantity": 60
+            }
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+            {
+              "name": "crackers",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": [
+            {
+              "name": "banana",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "meal_type": "dinner",
+          "foods": [
+            {
+              "name": "egg",
+              "quantity": 2
+            },
+            {
+              "name": "smoked salmon",
+              "quantity": 100
+            },
+            {
+              "name": "broccoli",
+              "quantity": 1
+            }
+          ]
         }
       ]
     },
@@ -130,32 +393,85 @@
       "meals": [
         {
           "meal_type": "breakfast",
-          "foods": []
-        },
-        {
-          "meal_type": "mid_morning",
-          "foods": []
-        },
-        {
-          "meal_type": "lunch",
-          "foods": []
-        },
-        {
-          "meal_type": "mid_afternoon",
           "foods": [
             {
-              "name": "average lunch",
+              "name": "milk",
+              "quantity": 300
+            },
+            {
+              "name": "muesli",
+              "quantity": 100
+            },
+            {
+              "name": "walnut",
+              "quantity": 3
+            },
+            {
+              "name": "apple",
               "quantity": 1
             }
           ]
         },
         {
+          "meal_type": "mid_morning",
+          "foods": [
+            {
+              "name": "banana",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+            {
+              "name": "spaghetti",
+              "quantity": 200
+            },
+            {
+              "name": "pesto",
+              "quantity": 95
+            }
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+            {
+              "name": "crackers",
+              "quantity": 2
+            }
+          ]
+        },
+        {
           "meal_type": "late_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "apple",
+              "quantity": 1
+            }
+          ]
         },
         {
           "meal_type": "dinner",
-          "foods": []
+          "foods": [
+            {
+              "name": "pan carre slice",
+              "quantity": 6
+            },
+            {
+              "name": "prosciutto cotto",
+              "quantity": 90
+            },
+            {
+              "name": "mayonnaise",
+              "quantity": 45
+            },
+            {
+              "name": "mustard",
+              "quantity": 45
+            }
+          ]
         }
       ]
     },
@@ -164,124 +480,105 @@
       "meals": [
         {
           "meal_type": "breakfast",
-          "foods": []
-        },
-        {
-          "meal_type": "mid_morning",
-          "foods": []
-        },
-        {
-          "meal_type": "lunch",
-          "foods": []
-        },
-        {
-          "meal_type": "mid_afternoon",
-          "foods": []
-        },
-        {
-          "meal_type": "late_afternoon",
-          "foods": []
-        },
-        {
-          "meal_type": "dinner",
-          "foods": []
-        }
-      ]
-    },
-    {
-      "day": "sunday",
-      "meals": [
-        {
-          "meal_type": "breakfast",
-          "foods": []
-        },
-        {
-          "meal_type": "mid_morning",
-          "foods": []
-        },
-        {
-          "meal_type": "lunch",
           "foods": [
+            {
+              "name": "milk",
+              "quantity": 300
+            },
+            {
+              "name": "muesli",
+              "quantity": 100
+            },
+            {
+              "name": "walnut",
+              "quantity": 3
+            },
             {
               "name": "banana",
-              "quantity": 10
-            }
-          ]
-        },
-        {
-          "meal_type": "mid_afternoon",
-          "foods": []
-        },
-        {
-          "meal_type": "late_afternoon",
-          "foods": []
-        },
-        {
-          "meal_type": "dinner",
-          "foods": []
-        }
-      ]
-    },
-    {
-      "day": "friday",
-      "meals": [
-        {
-          "meal_type": "breakfast",
-          "foods": []
-        },
-        {
-          "meal_type": "mid_morning",
-          "foods": []
-        },
-        {
-          "meal_type": "lunch",
-          "foods": []
-        },
-        {
-          "meal_type": "mid_afternoon",
-          "foods": [
-            {
-              "name": "average lunch",
               "quantity": 1
             }
           ]
         },
         {
-          "meal_type": "late_afternoon",
-          "foods": []
-        },
-        {
-          "meal_type": "dinner",
-          "foods": []
-        }
-      ]
-    },
-    {
-      "day": "saturday",
-      "meals": [
-        {
-          "meal_type": "breakfast",
-          "foods": []
-        },
-        {
           "meal_type": "mid_morning",
-          "foods": []
+          "foods": [
+            {
+              "name": "apple",
+              "quantity": 2
+            }
+          ]
         },
         {
           "meal_type": "lunch",
-          "foods": []
+          "foods": [
+            {
+              "name": "spaghetti",
+              "quantity": 200
+            },
+            {
+              "name": "ragu",
+              "quantity": 200
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30
+            },
+            {
+              "name": "parmigiano",
+              "quantity": 30
+            }
+          ]
         },
         {
           "meal_type": "mid_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "crackers",
+              "quantity": 1
+            },
+            {
+              "name": "pan carre slice",
+              "quantity": 4
+            },
+            {
+              "name": "nutella",
+              "quantity": 60
+            }
+          ]
         },
         {
           "meal_type": "late_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "crackers",
+              "quantity": 1
+            },
+            {
+              "name": "egg",
+              "quantity": 2
+            }
+          ]
         },
         {
           "meal_type": "dinner",
-          "foods": []
+          "foods": [
+            {
+              "name": "basmati",
+              "quantity": 180
+            },
+            {
+              "name": "tomato",
+              "quantity": 2
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30
+            },
+            {
+              "name": "onion",
+              "quantity": 1
+            }
+          ]
         }
       ]
     },
@@ -290,32 +587,97 @@
       "meals": [
         {
           "meal_type": "breakfast",
-          "foods": []
+          "foods": [
+            {
+              "name": "pan carre slice",
+              "quantity": 4
+            },
+            {
+              "name": "nutella",
+              "quantity": 60
+            },
+            {
+              "name": "apple",
+              "quantity": 1
+            }
+          ]
         },
         {
           "meal_type": "mid_morning",
-          "foods": []
+          "foods": [
+            {
+              "name": "banana",
+              "quantity": 1
+            }
+          ]
         },
         {
           "meal_type": "lunch",
           "foods": [
             {
-              "name": "banana",
-              "quantity": 10
+              "name": "basmati",
+              "quantity": 180
+            },
+            {
+              "name": "cucumber",
+              "quantity": 2
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30
+            },
+            {
+              "name": "onion",
+              "quantity": 1
+            },
+            {
+              "name": "beef",
+              "quantity": 150
+            },
+            {
+              "name": "olive oil",
+              "quantity": 30
             }
           ]
         },
         {
           "meal_type": "mid_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "crackers",
+              "quantity": 2
+            },
+            {
+              "name": "pan carre slice",
+              "quantity": 4
+            },
+            {
+              "name": "jam",
+              "quantity": 60
+            }
+          ]
         },
         {
           "meal_type": "late_afternoon",
-          "foods": []
+          "foods": [
+            {
+              "name": "crackers",
+              "quantity": 15
+            }
+          ]
         },
         {
           "meal_type": "dinner",
-          "foods": []
+          "foods": [
+            {
+              "name": "smoked salmon",
+              "quantity": 100
+            },
+            {
+              "name": "carrots",
+              "quantity": 2
+            }
+          ]
         }
       ]
     }

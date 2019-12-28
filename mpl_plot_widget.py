@@ -3,11 +3,11 @@
 
 import matplotlib
 
-from PyQt5 import QtGui, QtWidgets
-from PyQt5.QtWidgets import QWidget, QApplication, QGridLayout
+from PyQt5 import QtWidgets
 
 matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
+
 plt.style.use('dark_background')
 
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -15,6 +15,7 @@ from matplotlib.figure import Figure
 
 from report import plot_into_axes
 from diet import Diet
+
 
 class MyMplCanvas(FigureCanvas):
     """Ultimately, this is a QWidget (as well as a FigureCanvasAgg, etc.)."""
@@ -24,7 +25,7 @@ class MyMplCanvas(FigureCanvas):
         self.fig = Figure(figsize=(width, height), dpi=dpi, facecolor=self.gray)
         self.ax0 = self.fig.add_subplot(211)
         self.ax1 = self.fig.add_subplot(212)
-        self.fig.subplots_adjust(bottom=0.15, top=0.95, left=0.08, right=0.98)
+        self.fig.subplots_adjust(bottom=0.15, top=0.95, left=0.06, right=0.99)
         self.ax0.set_facecolor(self.gray)
         self.ax1.set_facecolor(self.gray)
 
@@ -56,6 +57,7 @@ class MyMplCanvas(FigureCanvas):
         # self.fig.subplots_adjust(bottom=0.15, top=0.95) # needed?
         self.ax0.set_facecolor(self.gray)
         self.ax1.set_facecolor(self.gray)
+
 
 class EmptyMplCanvas(MyMplCanvas):
     def compute_initial_figure(self):

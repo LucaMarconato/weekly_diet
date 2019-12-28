@@ -52,7 +52,8 @@ def plot_into_axes(diet, ax0, ax1, legend_background_color=None):
     df['day'] = df.index
     sns.barplot(x='day', y='calories', data=df, color='red', ax=ax0)
     ax0.set_xlabel('')
-    ax0.axhline(3500, ls='--', color='red')
+    ax0.set_ylabel('kcal')
+    ax0.axhline(3000, ls='--', color='red')
 
     df_melted = df.copy()
     df_melted.drop(['calories'], axis=1, inplace=True)
@@ -63,9 +64,9 @@ def plot_into_axes(diet, ax0, ax1, legend_background_color=None):
     legend_colors = [x._facecolor for x in legend.legendHandles]
     if legend_background_color is not None:
         legend.get_frame().set_color(legend_background_color)
-    ax1.axhline(442, ls='--', color=legend_colors[0])
-    ax1.axhline(210, ls='--', color=legend_colors[1])
-    ax1.axhline(103, ls='--', color=legend_colors[2])
+    ax1.axhline(400, ls='--', color=legend_colors[0])
+    ax1.axhline(150, ls='--', color=legend_colors[1])
+    ax1.axhline(80, ls='--', color=legend_colors[2])
 
 
 def plot_nutrients_fragmentation(diet: Diet):

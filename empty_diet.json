@@ -1,0 +1,249 @@
+{
+  "days": [
+    {
+      "day": "monday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "dinner",
+          "foods": [
+          ]
+        }
+      ]
+    },
+    {
+      "day": "tuesday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "dinner",
+          "foods": [
+          ]
+        }
+      ]
+    },
+    {
+      "day": "wednesday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "dinner",
+          "foods": [
+          ]
+        }
+      ]
+    },
+    {
+      "day": "thursday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "dinner",
+          "foods": [
+          ]
+        }
+      ]
+    },
+    {
+      "day": "friday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "dinner",
+          "foods": [
+          ]
+        }
+      ]
+    },
+    {
+      "day": "saturday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "dinner",
+          "foods": [
+          ]
+        }
+      ]
+    },
+    {
+      "day": "sunday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": [
+          ]
+        },
+        {
+          "meal_type": "dinner",
+          "foods": [
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,8 @@
-from enum import IntEnum, Enum, auto
-from typing import List, Dict
-from foods import Food, FoodType, FoodUnit, get_food_from_db
 import json
+from enum import Enum
+from typing import Dict
+
+from foods import get_food_from_db
 
 MealType = Enum('MealType', 'breakfast mid_morning lunch mid_afternoon late_afternoon dinner')
 
