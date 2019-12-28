@@ -21,10 +21,11 @@ The app represents a week made of 6 meals per day. You can drag and drop particu
 
 ## Limitations and bugs
 * Behavior with multiple items. Suppose that you want to eat two apples for breakfast on Monday. You can drag twice `1 x apple` (these two items will not be merged, it's a limitation I know), or you can drag it once and then edit it as `2 x apple`. Mind the singular! Also, keep the spaces as shown, do not write `2x apple`.
-* After you finish editing a food, unfortunately the graph is not automatically updated and the diet is not saved; this is an annoying bug that I have not been able to fix; you need to press `CTRL+R` (or `CMD+R` on macOS), or drag foods around, to update the graph. More details on this bug here.
+* After you finish editing a food, unfortunately the graph is not automatically updated and the diet is not saved; this is an annoying bug that I have not been able to fix; you need to press `CTRL+R` (or `CMD+R` on macOS), or drag foods around, to update the graph. More details on this bug [here](https://github.com/LucaMarconato/weekly_diet/issues/1).
+* Tested only on macOS with Dark Mode enabled, probably by disabling it the graphic will not be sleek anymore 😬
 
 ## Todo
-* Add a check that the nutritional information for each food makes sense, this can be automatically looked up online or one can start by checking if the calories are roughly the one expected from the food compositions (carbs, proteins and fats)
+* Add a method to check that the nutritional information for each food makes sense, this can be automatically looked up online or one can start by checking if the calories are roughly the one expected from the food compositions (carbs, proteins and fats)
 
 ## Gallery
 ![Demo](demo.gif)
