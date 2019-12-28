@@ -5,48 +5,143 @@
       "meals": [
         {
           "meal_type": "breakfast",
-          "foods": [
-            {
-              "name": "apple",
-              "quantity": 1
-            },
-            {
-              "name": "milk",
-              "quantity": 300
-            },
-            {
-              "name": "muesli",
-              "quantity": 50
-            },
-            {
-              "name": "banana",
-              "quantity": 1
-            },
-            {
-              "name": "walnut",
-              "quantity": 5
-            }
-          ]
+          "foods": []
         },
         {
           "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
+          "meal_type": "lunch",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "dinner",
+          "foods": []
+        }
+      ]
+    },
+    {
+      "day": "tuesday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
+          "meal_type": "lunch",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "dinner",
+          "foods": []
+        }
+      ]
+    },
+    {
+      "day": "wednesday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
+          "meal_type": "lunch",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "dinner",
+          "foods": []
+        }
+      ]
+    },
+    {
+      "day": "thursday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
+          "meal_type": "lunch",
           "foods": [
             {
-              "name": "apple",
-              "quantity": 1
+              "name": "spaghetti",
+              "quantity": 200
             },
             {
-              "name": "dried fruit",
-              "quantity": 50
-            },
-            {
-              "name": "crackers",
-              "quantity": 1
+              "name": "olive oil",
+              "quantity": 10
             }
           ]
         },
         {
+          "meal_type": "mid_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "dinner",
+          "foods": []
+        }
+      ]
+    },
+    {
+      "day": "friday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
           "meal_type": "lunch",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_afternoon",
           "foods": [
             {
               "name": "average lunch",
@@ -55,77 +150,172 @@
           ]
         },
         {
-          "meal_type": "mid_afternoon",
-          "foods": [
-            {
-              "name": "apple",
-              "quantity": 1
-            },
-            {
-              "name": "dried fruit",
-              "quantity": 50
-            },
-            {
-              "name": "crackers",
-              "quantity": 2
-            }
-          ]
+          "meal_type": "late_afternoon",
+          "foods": []
         },
         {
           "meal_type": "dinner",
-          "foods": [
-            {
-              "name": "spaghetti",
-              "quantity": 200
-            },
-            {
-              "name": "banana",
-              "quantity": 1
-            },
-            {
-              "name": "pesto",
-              "quantity": 63
-            }
-          ]
+          "foods": []
         }
-      ]
-    },
-    {
-      "day": "tuesday",
-      "meals": [
-      ]
-    },
-    {
-      "day": "wednesday",
-      "meals": [
-      ]
-    },
-    {
-      "day": "thursday",
-      "meals": [
-      ]
-    },
-    {
-      "day": "friday",
-      "meals": [
       ]
     },
     {
       "day": "saturday",
       "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
+          "meal_type": "lunch",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "dinner",
+          "foods": []
+        }
       ]
     },
     {
       "day": "sunday",
       "meals": [
         {
-        "meal_type": "breakfast",
-        "foods": [
-          {
-          "name": "basmati",
-          "quantity": 1500
-          }
-        ]
+          "meal_type": "breakfast",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+            {
+              "name": "banana",
+              "quantity": 10
+            }
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "dinner",
+          "foods": []
+        }
+      ]
+    },
+    {
+      "day": "friday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
+          "meal_type": "lunch",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": [
+            {
+              "name": "average lunch",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "dinner",
+          "foods": []
+        }
+      ]
+    },
+    {
+      "day": "saturday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
+          "meal_type": "lunch",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "dinner",
+          "foods": []
+        }
+      ]
+    },
+    {
+      "day": "sunday",
+      "meals": [
+        {
+          "meal_type": "breakfast",
+          "foods": []
+        },
+        {
+          "meal_type": "mid_morning",
+          "foods": []
+        },
+        {
+          "meal_type": "lunch",
+          "foods": [
+            {
+              "name": "banana",
+              "quantity": 10
+            }
+          ]
+        },
+        {
+          "meal_type": "mid_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "late_afternoon",
+          "foods": []
+        },
+        {
+          "meal_type": "dinner",
+          "foods": []
         }
       ]
     }
