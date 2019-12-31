@@ -1,12 +1,12 @@
 from enum import Enum
 from pathlib import Path
 
-FILE_PATH = Path(__file__).resolve().parent.parent
+FILE_PATH = Path(__file__).resolve().parent
 
 
 class UiThemes(Enum):
-    DAY = f'{FILE_PATH}/ui/day.ui'
-    GUI = f'{FILE_PATH}/ui/gui.ui'
+    DAY = f'{FILE_PATH.parent}/ui/day.ui'
+    GUI = f'{FILE_PATH.parent}/ui/gui.ui'
 
 
 class MealType(Enum):

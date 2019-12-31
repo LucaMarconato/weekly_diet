@@ -10,14 +10,12 @@ class Meal:
         self.meal_type = None
         self.foods = list()
 
-    def from_dict(self, j: Dict):
-        self.meal_type = MealType.from_string(j['meal_type'])
-        for food_j in j['foods']:
-            food_name = food_j['name']
-            quantity = food_j['quantity']
-            food = get_food_from_db(food_name)
-            food.quantity = quantity
-            self.foods.append(food)
+    @classmethod
+    def from_dict(cls, meal_info: Dict):
+        meal = cls()
+        meal.meal_type = MealType.from_string(meal_info['meal_type'])
+        meal.foods = [get_food_from_db(food['name'], food['quantity']) for food in meal_info['foods']]
+        return meal
 
     def __eq__(self, other):
         return (self.meal_type == other.meal_type and
@@ -31,10 +29,7 @@ class Day:
 
     def from_dict(self, j: Dict):
         self.day_name = j['day']
-        for meal_j in j['meals']:
-            meal = Meal()
-            meal.from_dict(meal_j)
-            self.meals.append(meal)
+        self.meals = [Meal.from_dict(x) for x in j['meals']]
 
 
 class Diet:

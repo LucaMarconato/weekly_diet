@@ -15,7 +15,6 @@ def test_meal_from_dict(mock_food):
     meal_expected = A_MEAL
     mock_food.return_value = A_FOOD
 
-    meal_actual = Meal()
-    meal_actual.from_dict(A_MEAL_INFO_JSON)
+    meal_actual = Meal.from_dict(A_MEAL_INFO_JSON)
 
     assert meal_expected == meal_actual

@@ -8,6 +8,7 @@ FoodUnit = Enum('FoodUnit', 'item gr ml')
 
 
 class Food:
+
     def __init__(self, name: str, food_type: FoodType, unit: FoodUnit, calories_per_unit: float,
                  carbohydrates_per_unit: float, proteins_per_unit: float, fats_per_unit: float):
         self.name = name
@@ -32,7 +33,7 @@ class Food:
         return self.fats_per_unit * self.quantity
 
 
-def get_food_from_db(name: str) -> Food:
+def get_food_from_db(name: str, quantity=None) -> Food:
     connection = sqlite3.connect('foods.db')
     cursor = connection.cursor()
     rows = cursor.execute('SELECT * FROM foods WHERE name = (?)', (name,)).fetchall()
@@ -55,6 +56,9 @@ def get_food_from_db(name: str) -> Food:
                 carbohydrates_per_unit=row[4],
                 proteins_per_unit=row[5],
                 fats_per_unit=row[6])
+
+    if quantity is not None:
+        food.quantity = quantity
     return food
 
 
