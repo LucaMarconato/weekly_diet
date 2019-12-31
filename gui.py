@@ -1,4 +1,3 @@
-import os
 import re
 from threading import Lock
 from typing import Dict
@@ -7,7 +6,8 @@ import PyQt5.uic
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QApplication
 
-from diet import Diet, MealType, Day, Meal
+from app.utils.enums import MealType, UiThemes
+from diet import Diet, Day, Meal
 from foods import Food, FoodType, FoodUnit, derived_foods, get_all_foods_from_db, get_food_from_db
 from mpl_plot_widget import MyMplCanvas
 
@@ -76,8 +76,7 @@ class DraggableListWidget(QtWidgets.QListWidget):
 class DayGui(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        this_file_path = os.path.dirname(os.path.abspath(__file__))
-        PyQt5.uic.loadUi(os.path.join(this_file_path, 'ui/day.ui'), self)
+        PyQt5.uic.loadUi(UiThemes.DAY.value, self)
         self.day_name = self.layout().itemAt(0).widget()
         self.meal_widgets: Dict[MealType, DraggableListWidget] = dict()
         for i, meal_type in zip(range(2, 19, 3), MealType):
@@ -102,8 +101,7 @@ class DayGui(QtWidgets.QWidget):
 class Gui(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        this_file_path = os.path.dirname(os.path.abspath(__file__))
-        PyQt5.uic.loadUi(os.path.join(this_file_path, 'ui/gui.ui'), self)
+        PyQt5.uic.loadUi(UiThemes.GUI.value, self)
         self.canvas = MyMplCanvas()
         self.canvas.setMaximumHeight(500)
         self.canvas.setMinimumHeight(400)

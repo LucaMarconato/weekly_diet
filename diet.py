@@ -1,25 +1,27 @@
 import json
-from enum import Enum
 from typing import Dict
-
+from app.utils.enums import MealType
 from foods import get_food_from_db
-
-MealType = Enum('MealType', 'breakfast mid_morning lunch mid_afternoon late_afternoon dinner')
 
 
 class Meal:
+
     def __init__(self):
         self.meal_type = None
         self.foods = list()
 
     def from_dict(self, j: Dict):
-        self.meal_type = MealType[j['meal_type']]
+        self.meal_type = MealType.from_string(j['meal_type'])
         for food_j in j['foods']:
             food_name = food_j['name']
             quantity = food_j['quantity']
             food = get_food_from_db(food_name)
             food.quantity = quantity
             self.foods.append(food)
+
+    def __eq__(self, other):
+        return (self.meal_type == other.meal_type and
+                all([x == y for x, y in zip(self.foods, other.foods)]))
 
 
 class Day:
