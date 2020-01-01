@@ -9,13 +9,17 @@ class UiThemes(Enum):
     GUI = f'{FILE_PATH.parent}/ui/gui.ui'
 
 
+class Files(Enum):
+    DIET_JSON = f'{FILE_PATH.parent.parent}/diet.json'
+
+
 class MealType(Enum):
-    BREAKFAST = 0,
-    MID_MORNING = 1,
-    LUNCH = 2,
-    MID_AFTERNOON = 3,
-    LATE_AFTERNOON = 4,
-    DINNER = 5
+    BREAKFAST = 'breakfast',
+    MID_MORNING = 'mid morning',
+    LUNCH = 'lunch',
+    MID_AFTERNOON = 'mid afternoon',
+    LATE_AFTERNOON = 'late afternoon',
+    DINNER = 'dinner'
 
     @staticmethod
     def from_string(meal_type):

@@ -14,7 +14,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
 from report import plot_into_axes
-from diet import Diet
+from app.diet import Diet
 
 
 class MyMplCanvas(FigureCanvas):

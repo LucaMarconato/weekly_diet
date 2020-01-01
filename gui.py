@@ -7,7 +7,7 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QApplication
 
 from app.utils.enums import MealType, UiThemes
-from diet import Diet, Day, Meal
+from app.diet import Diet, Day, Meal
 from foods import Food, FoodType, FoodUnit, derived_foods, get_all_foods_from_db, get_food_from_db
 from mpl_plot_widget import MyMplCanvas
 
@@ -119,10 +119,10 @@ class Gui(QtWidgets.QWidget):
             day_gui = DayGui()
             self.day_guis.append(day_gui)
             self.hbox_layout.addWidget(day_gui)
-            day_gui.set_day(day.day_name)
+            day_gui.set_day(day.name)
             for meal in day.meals:
                 for food in meal.foods:
-                    day_gui.add_food_to_meal(food, meal.meal_type)
+                    day_gui.add_food_to_meal(food, meal.type)
 
         self.menu_widget = self.layout().itemAt(1).widget()
         self.menu_categories_widgets: Dict[FoodType, DraggableListWidget] = dict()
@@ -152,13 +152,13 @@ class Gui(QtWidgets.QWidget):
         for day_gui in self.day_guis:
             day = Day()
             self.diet.days.append(day)
-            day.day_name = day_gui.day_name.text()
+            day.name = day_gui.day_name.text()
             # print(day.day_name)
             for meal_type, meal_widget in day_gui.meal_widgets.items():
                 old_state = meal_widget.blockSignals(True)
                 meal = Meal()
                 day.meals.append(meal)
-                meal.meal_type = meal_type
+                meal.type = meal_type
                 # print(meal.meal_type.name)
                 model = meal_widget.model()
                 i = 0

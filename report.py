@@ -1,9 +1,8 @@
-from diet import Diet
+from app.diet import Diet
 from foods import derived_foods
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-import numpy as np
 from typing import Dict
 
 
@@ -43,7 +42,7 @@ def generate_daily_intake_information(diet: Diet) -> pd.DataFrame:
                 total_carbohydrates += food.carbohydrates()
                 total_proteins += food.proteins()
                 total_fats += food.fats()
-        df.loc[day.day_name] = [total_calories, total_carbohydrates, total_proteins, total_fats]
+        df.loc[day.name] = [total_calories, total_carbohydrates, total_proteins, total_fats]
     return df
 
 
