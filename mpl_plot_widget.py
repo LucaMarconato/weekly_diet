@@ -2,8 +2,8 @@
 # adapted from https://matplotlib.org/gallery/user_interfaces/embedding_in_qt5_sgskip.html
 
 import matplotlib
-
 from PyQt5 import QtWidgets
+from app.utils.enums import Files
 
 matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
@@ -40,13 +40,13 @@ class MyMplCanvas(FigureCanvas):
         FigureCanvas.updateGeometry(self)
 
     def compute_initial_figure(self):
-        diet = Diet('diet.json')
+        diet = Diet(Files.DIET_JSON.value)
         plot_into_axes(diet, self.ax0, self.ax1, self.gray)
 
     def update_figure(self, diet):
         self.clear_canvas()
         # at least when testing, I prefer consistency over performance, that's why I reload diet
-        diet = Diet('diet.json')
+        diet = Diet(Files.DIET_JSON.value)
         plot_into_axes(diet, self.ax0, self.ax1, self.gray)
         self.draw()
 

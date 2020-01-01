@@ -14,15 +14,15 @@ class Files(Enum):
 
 
 class MealType(Enum):
-    BREAKFAST = 'breakfast',
-    MID_MORNING = 'mid morning',
-    LUNCH = 'lunch',
-    MID_AFTERNOON = 'mid afternoon',
-    LATE_AFTERNOON = 'late afternoon',
+    BREAKFAST = 'breakfast'
+    MID_MORNING = 'mid morning'
+    LUNCH = 'lunch'
+    MID_AFTERNOON = 'mid afternoon'
+    LATE_AFTERNOON = 'late afternoon'
     DINNER = 'dinner'
 
     @staticmethod
-    def from_string(meal_type):
+    def from_string(meal_type: str):
         meal_type = meal_type.lower()
         if 'breakfast' in meal_type:
             return MealType.BREAKFAST

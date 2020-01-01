@@ -6,7 +6,7 @@ import PyQt5.uic
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QApplication
 
-from app.utils.enums import MealType, UiThemes
+from app.utils.enums import MealType, UiThemes, Files
 from app.diet import Diet, Day, Meal
 from foods import Food, FoodType, FoodUnit, derived_foods, get_all_foods_from_db, get_food_from_db
 from mpl_plot_widget import MyMplCanvas
@@ -113,7 +113,7 @@ class Gui(QtWidgets.QWidget):
         self.day_guis = list()
         self.update_diet_lock = Lock()
 
-        self.diet = Diet('diet.json')
+        self.diet = Diet(Files.DIET_JSON.value)
 
         for day in self.diet.days:
             day_gui = DayGui()
@@ -225,9 +225,9 @@ class Gui(QtWidgets.QWidget):
 
 if __name__ == '__main__':
     import sys
-
     if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
         app = QApplication([])
+
     gui = Gui()
     gui.show()
     sys.exit(app.exec_())
