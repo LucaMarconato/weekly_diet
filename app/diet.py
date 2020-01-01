@@ -21,8 +21,7 @@ class Meal:
         return dict(meal_type=self.type.value, foods=[food.to_dict() for food in self.foods])
 
     def __eq__(self, other):
-        return (self.type == other.type and
-                all([x == y for x, y in zip(self.foods, other.foods)]))
+        return self.type == other.type and self.foods == other.foods
 
 
 class Day:
@@ -42,8 +41,7 @@ class Day:
         return dict(day=self.name, meals=[meal.to_dict() for meal in self.meals])
 
     def __eq__(self, other):
-        return (self.name == other.name and
-                all([x == y for x, y in zip(self.meals, other.meals)]))
+        return self.name == other.name and self.meals == other.meals
 
 
 class Diet:

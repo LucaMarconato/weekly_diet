@@ -2,15 +2,17 @@ from enum import Enum
 from pathlib import Path
 
 FILE_PATH = Path(__file__).resolve().parent
+ROOT = FILE_PATH.parent.parent
+UI_FOLDER = f'{FILE_PATH.parent}/ui'
 
 
 class UiThemes(Enum):
-    DAY = f'{FILE_PATH.parent}/ui/day.ui'
-    GUI = f'{FILE_PATH.parent}/ui/gui.ui'
+    DAY = f'{UI_FOLDER}/day.ui'
+    GUI = f'{UI_FOLDER}/gui.ui'
 
 
 class Files(Enum):
-    DIET_JSON = f'{FILE_PATH.parent.parent}/diet.json'
+    DIET_JSON = f'{ROOT}/diet.json'
 
 
 class MealType(Enum):
