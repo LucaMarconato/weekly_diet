@@ -7,7 +7,7 @@
 ## The app in brief
 The app represents a week made of 6 meals per day. You can drag and drop particular foods, or recipes, into each meal. The total daily calories, carbohydrates, proteins and fats will be shown and you can then generate a shopping list.
 
-*(since some people asked me: no, this is not my real diet. I normally eat more 😁)*
+*(since some people asked me: no, this is not my real diet; I normally eat more 😁)*
 ![Screenshot of a draft of my diet](screenshot.png)
 
 ### Technologies, data types and usage
